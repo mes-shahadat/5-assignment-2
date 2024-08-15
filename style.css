@@ -808,7 +808,7 @@ td {
     content: "\2800✔\2800";
     position: absolute;
     top: 1rem;
-    left: -4.6rem;
+    left: -4.9rem;
     background-color: var(--clr-secondary-3);
     color: var(--clr-white);
     border-radius: 100%;
@@ -820,7 +820,7 @@ td {
     content: "•••";
     position: absolute;
     top: 1rem;
-    left: -4.6rem;
+    left: -5rem;
     padding: .5rem .7rem;
     background-color: var(--clr-secondary-3);
     color: var(--clr-white);
