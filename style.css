@@ -1,0 +1,1132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "miama";
+    src: url('./Miama.otf') format("opentype");
+}
+
+/* custom properties / variables */
+:root {
+
+    font-size: 62.5%;
+
+    /* font color */
+    --clr-white: hsla(0, 0%, 101%, 1);
+    --clr-white-1: hsla(0, 0%, 101%, 0.5);
+    --clr-white-2: hsla(0, 0%, 101%, 0.6);
+
+    /* background color */
+    --clr-primary: hsla(8, 77%, 57%, 1);
+    --clr-primary-light: hsla(8, 77%, 57%, .5);
+    --clr-secondary: hsla(0, 0%, 0%, 1);
+    --clr-secondary-2: hsla(0, 0%, 13%, 1);
+    --clr-secondary-3: hsla(0, 0%, 101%, 0.1);
+
+    --clr-header-linear: hsla(0, 0%, 7%, 1), hsla(0, 0%, 47%, 0);
+
+
+
+    /* font family */
+    --ff-primary: "Inter", sans-serif;
+
+    --ff-heading: var(--ff-primary);
+    --ff-body: var(--ff-primary);
+    --ff-body-2: "miama", cursive;
+    ;
+
+
+    /* font weight */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-800: 800;
+    --fw-900: 900;
+
+
+    /* font size */
+    --fs-h1: clamp(4.8rem, 1.8rem + 9.6vw, 7.8rem);
+    --fs-h2: clamp(4rem, 1rem + 9.6vw, 7rem);
+    --fs-h3: clamp(3.6rem, 2.4rem + 3.84vw, 4.8rem);
+    --fs-h4: clamp(2.9rem, 1.8rem + 3.52vw, 4rem);
+    --fs-h5: clamp(2.8rem, 2rem + 2.56vw, 3.6rem);
+    --fs-h6: clamp(2.4rem, 1.6rem + 2.56vw, 3.2rem);
+    --fs-h7: clamp(2rem, 1.2rem + 2.56vw, 2.8rem);
+    --fs-h8: clamp(1.7rem, 1rem + 2.24vw, 2.4rem);
+    --fs-h9: clamp(1.4rem, 0.8rem + 1.92vw, 2rem);
+
+    --fs-body: 1.6rem;
+    --fs-body-secondary: 1.4rem;
+    --fs-nav: clamp(1.4rem, 1rem + 1.28vw, 1.8rem);
+    --fs-footer-nav: clamp(1.7rem, 1.1rem + 1.92vw, 2.3rem);
+    --fs-copywrite: clamp(1.8rem, 1.2rem + 1.92vw, 2.4rem);
+
+
+    /* padding, margin */
+    --s-large: 10rem;
+    --s-medium: 8.8rem;
+    --s-small: 5.7rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-heading);
+    line-height: 1;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* utility classes */
+
+.ff-cursive {
+    font-family: var(--ff-body-2);
+}
+
+.fs-h1 {
+    font-size: var(--fs-h1);
+}
+
+.fs-h2 {
+    font-size: var(--fs-h2);
+}
+
+.fs-h3 {
+    font-size: var(--fs-h3);
+}
+
+.fs-h4 {
+    font-size: var(--fs-h4);
+}
+
+.fs-h5 {
+    font-size: var(--fs-h5);
+}
+
+.fs-h6 {
+    font-size: var(--fs-h6);
+}
+
+.fs-h7 {
+    font-size: var(--fs-h7);
+}
+
+.fs-h8 {
+    font-size: var(--fs-h8);
+}
+
+.fs-h9 {
+    font-size: var(--fs-h9);
+}
+
+.fs-body-secondary {
+    font-size: var(--fs-body-secondary);
+}
+
+.fs-nav {
+    font-size: var(--fs-nav);
+}
+
+.fs-footer-nav {
+    font-size: var(--fs-footer-nav);
+}
+
+.fs-copywrite {
+    font-size: var(--fs-copywrite);
+}
+
+
+.text-primary {
+    color: var(--clr-primary) !important;
+}
+
+.text-heading {
+    color: var(--clr-white) !important;
+}
+
+.text-body {
+    color: var(--clr-white-1);
+}
+
+.text-placeholder {
+    color: var(--clr-white-2);
+}
+
+.bg-primary {
+    background-color: var(--clr-primary);
+}
+
+.bg-dark {
+    background-color: var(--clr-secondary);
+}
+
+.bg-dark-2 {
+    background-color: var(--clr-secondary-2);
+}
+
+.bg-dark-3 {
+    background-color: var(--clr-secondary-3);
+}
+
+
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
+.fw-500 {
+    font-weight: var(--fw-500);
+}
+
+.fw-600 {
+    font-weight: var(--fw-600)
+}
+
+.fw-800 {
+    font-weight: var(--fw-800)
+}
+
+.fw-900 {
+    font-weight: var(--fw-900)
+}
+
+
+/* components */
+
+.active {
+    background-color: var(--clr-primary);
+    border-radius: 5rem;
+}
+
+.container {
+    width: 80%;
+}
+
+.btn-primary {
+    padding: .8em 1em;
+    border: none;
+    border-radius: 5rem;
+}
+
+/* ############# header section ############### */
+
+body {
+    display: grid;
+    max-width: 192rem;
+    margin: auto;
+}
+
+.hero-section {
+    background-image: linear-gradient(var(--clr-header-linear));
+}
+
+.header-nav {
+    margin: auto;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav li {
+    list-style: none;
+}
+
+.header-nav a {
+    color: var(--clr-white);
+    text-decoration: none;
+}
+
+.header-nav .navigation-links {
+    display: flex;
+    gap: 4rem;
+    transition: top .5s, right .5s;
+    border: 1px solid var(--clr-white-1);
+    border-radius: 5rem;
+    padding: 1.2rem .2rem;
+}
+
+.header-nav .navigation-links a {
+    padding: .5em 1em;
+    transition: all .5s;
+}
+
+.header-nav .navigation-links a:hover:not(.active) {
+    background-color: var(--clr-primary-light);
+    border-radius: 5rem;
+}
+
+.header-content {
+    /* min-height: 85svh; */
+    width: 75%;
+    margin: auto;
+    margin-top: var(--s-small);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10rem;
+}
+
+.fitness-content {
+    max-width: 52ch;
+}
+
+.fitness-content * {
+    margin: 1.5rem .5rem;
+}
+
+.fitness-content h1 span {
+    font-size: calc(var(--fs-h1) + 3rem);
+    vertical-align: middle;
+}
+
+.fitness-content button:first-of-type {
+    border: 2px solid var(--clr-primary);
+}
+
+.fitness-content button:last-child {
+    background-color: hsla(0, 14%, 1%, 0);
+    outline: 2px solid var(--clr-white);
+}
+
+.fitness-content a {
+    color: var(--clr-white);
+    font-weight: var(--fw-medium);
+    text-decoration: none;
+}
+
+
+.fitness-image {
+    position: relative;
+}
+
+.fitness-image img {
+    max-width: 100rem;
+}
+
+.fitness-image .item {
+    position: absolute;
+    max-width: fit-content;
+    backdrop-filter: blur(.5rem);
+    padding: .5em 1.2em;
+    border-radius: 1rem;
+}
+
+.fitness-image .item p:last-child {
+    font-size: var(--fs-body-secondary);
+}
+
+.fitness-image .item1 {
+    background-color: hsla(0, 0%, 100%, .25);
+    top: 11rem;
+    right: -5rem;
+}
+
+.fitness-image .item2 {
+    background-color: hsla(0, 0%, 100%, .15);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    left: -9rem;
+    bottom: 7rem;
+}
+
+.fitness-image .item2 span {
+    display: inline-block;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--clr-primary);
+}
+
+.fitness-image .item2 small {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(1.4) scaleY(1.1);
+    border-top: 1rem solid transparent;
+    border-left: 1rem solid white;
+    border-bottom: 1rem solid transparent;
+}
+
+.hamburger {
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 3rem;
+    margin: .2rem;
+    border: 2px solid var(--clr-white);
+    border-radius: .5rem;
+    transform-origin: left center;
+    transition-property: transform, opacity;
+    transition-duration: .5s;
+    background-color: white;
+}
+
+.hamburger input {
+    position: absolute;
+    top: .5rem;
+    left: 1.2rem;
+    scale: 3;
+    opacity: 0;
+}
+
+.hamburger:has(input:checked) {
+    position: fixed;
+    right: .8rem;
+    right: 1.2rem;
+}
+
+.hamburger:has(input:checked)+.navigation-links {
+    right: 1rem;
+}
+
+.hamburger:has(input:checked) span:nth-child(1) {
+    transform: rotate(37deg);
+}
+
+.hamburger:has(input:checked) span:nth-child(4) {
+    transform: rotate(-37deg);
+}
+
+.hamburger:has(input:checked) span:nth-child(2),
+.hamburger:has(input:checked) span:nth-child(3) {
+    opacity: 0;
+}
+
+/* ################### change habits section ################### */
+
+.habits-section {
+    margin: var(--s-large) auto;
+}
+
+.habits-section header * {
+    margin: 1rem 0;
+}
+
+.habits-section header {
+    max-width: 70ch;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.habit-items .image-wrapper {
+    max-width: max-content;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 3rem auto;
+}
+
+.habit-items .item-info {
+    max-width: 30ch;
+    margin: auto;
+    text-align: center;
+}
+
+.habit-items .item-info h3 {
+    margin: 1rem auto;
+}
+
+.habit-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* #################### running section ######################## */
+
+.run-section {
+    border-radius: 2rem;
+    padding: var(--s-small) 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.running-info {
+    max-width: 46ch;
+}
+
+.running-info a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+.running-info>* {
+    margin: 2rem 0;
+}
+
+.run-section .image-wrapper {
+    max-width: 50rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.run-section .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: -75rem -20rem;
+}
+
+/* ######################### training section ######################## */
+
+.training-section {
+    margin: var(--s-large) auto;
+}
+
+.training-content {
+    max-width: 70ch;
+}
+
+.training-content> h2,
+.training-content> p {
+    margin: 2.5rem 0;
+}
+
+.training-images {
+    margin: var(--s-small) auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.training-images div {
+    position: relative;
+}
+
+.training-images div::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.training-images div p {
+    position: absolute;
+    top: 0;
+    max-width: 24ch;
+}
+
+.training-images .row {
+    display: grid;
+}
+
+.training-images .row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.training-images .row-1 {
+    grid-template-columns: 1fr 2fr 1.5fr;
+}
+
+.training-images .row-2 {
+    grid-template-columns: 2fr 1fr 1.8fr;
+}
+
+.training-images .row-1 div:nth-child(1)::before {
+    background-color: hsla(169, 100%, 51%, 0.5);
+}
+
+.training-images .row-1 div:nth-child(2)::before {
+    background-color: hsla(0, 100%, 51%, 0.3);
+}
+
+.training-images .row-1 div:nth-child(3)::before {
+    background-color: hsla(0, 0%, 1%, 0.5);
+}
+
+.training-images .row-2 div:nth-child(1)::before {
+    background-color: hsla(0, 0%, 1%, 0.5);
+}
+
+.training-images .row-2 div:nth-child(2)::before {
+    background-color: hsla(104, 100%, 51%, 0.3);
+}
+
+.training-images .row-2 div:nth-child(3)::before {
+    background-color: hsla(223, 100%, 51%, 0.3);
+}
+
+.training-images .row-1 div:nth-child(1) p {
+    top: 40%;
+    left: 5%;
+}
+
+.training-images .row-1 div:nth-child(2) p {
+    top: 10%;
+    left: 5%;
+}
+
+.training-images .row-1 div:nth-child(3) p {
+    top: 55%;
+    left: 10%;
+}
+
+.training-images .row-2 div:nth-child(1) p {
+    top: 10%;
+    right: 0%;
+}
+
+.training-images .row-2 div:nth-child(2) p {
+    top: 55%;
+    left: 10%;
+}
+
+.training-images .row-2 div:nth-child(3) p {
+    top: 55%;
+    left: 10%;
+}
+
+/* ################### BMI calculator section #################### */
+
+.calculator-section header {
+    max-width: 70ch;
+    margin: auto;
+}
+
+.calculator-section header p {
+    margin: 2rem 0;
+}
+
+.bmi-main {
+    padding: var(--s-small) 0;
+    margin: 10rem 0;
+}
+
+.calculator-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    gap: 2rem;
+}
+
+.calculator-content > div{
+    width: 100%;
+}
+
+.BMI-chart th,
+td {
+    border: 2px solid var(--clr-secondary-3);
+    padding: 1rem;
+    text-align: start;
+}
+
+.BMI-chart table {
+    border-collapse: collapse;
+}
+
+.BMI-chart caption {
+    width: max-content;
+    margin: 1.5rem 0 4rem 0;
+}
+
+.BMI-calculator {
+    width: max-content;
+}
+
+.BMI-calculator .calculator-container {
+    max-width: 65ch;
+    padding: 0 1rem 1rem 0;
+}
+
+.calculator-container h3,
+.calculator-container p {
+    margin: 2rem 0;
+}
+
+.BMI-calculator form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1rem;
+}
+
+.BMI-calculator input,
+.BMI-calculator select {
+    background-color: var(--clr-secondary-3);
+    padding-left: 1rem;
+    min-height: 5.5rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--clr-white-2);
+    /* font-size: var(--fs-body-secondary); */
+}
+
+.BMI-calculator input::placeholder {
+    color: var(--clr-white-2);
+}
+
+.BMI-calculator select:last-of-type {
+    grid-column: span 2;
+}
+
+.BMI-calculator option {
+    background-color: var(--clr-secondary-2);
+}
+
+.BMI-calculator input:focus,
+.BMI-calculator select:focus {
+    outline: none;
+}
+
+.BMI-calculator button {
+    max-width: 25rem;
+}
+
+/* ###################### team section ######################### */
+
+.team-content {
+    max-width: 70ch;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+.team-content h2,
+.team-content p {
+    margin: 1rem 0;
+}
+
+.team-cards {
+    margin: 5rem auto;
+    padding: 1.5em;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5em;
+}
+
+.team-cards .card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.team-cards .member-info {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.team-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ######################### why choose us section ################# */
+
+.why-choose-us {
+    margin: auto;
+}
+
+.why-choose-us .details {
+    border-radius: 1rem;
+    padding-bottom: 4rem;
+}
+
+.why-choose-us .items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.why-choose-us p {
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 55ch;
+    margin: auto;
+}
+
+.why-choose-us h3 {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.why-choose-us h4 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.why-choose-us .item {
+    padding: 4rem;
+    border-radius: 1rem;
+}
+
+.why-choose-us .item hr {
+    border-color: var(--clr-secondary-3);
+    margin: 1.2rem;
+}
+
+.why-choose-us li {
+    position: relative;
+    list-style: none;
+    padding: 1.5rem 0;
+    line-height: 2;
+    margin-left: 4.8rem;
+    font-size: var(--fs-nav);
+}
+
+.why-choose-us li::before {
+    content: "\2800✔\2800";
+    position: absolute;
+    top: 1rem;
+    left: -4.6rem;
+    background-color: var(--clr-secondary-3);
+    color: var(--clr-white);
+    border-radius: 100%;
+    padding: .4rem .2rem;
+
+}
+
+.why-choose-us li:last-child:before {
+    content: "•••";
+    position: absolute;
+    top: 1rem;
+    left: -4.6rem;
+    padding: .5rem .7rem;
+    background-color: var(--clr-secondary-3);
+    color: var(--clr-white);
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 80.5em) {
+
+    .why-choose-us .items {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 44.75em) {
+
+    .why-choose-us .items {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+}
+
+/* ####################### footer section ###################### */
+
+footer {
+    margin-top: var(--s-large);
+    padding: 5rem 0;
+}
+
+.footer-section {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+.footer-section p {
+    max-width: 40ch;
+}
+
+.copywright {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.footer-section h2 {
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: var(--clr-white-1);
+    text-decoration: none;
+    display: block;
+}
+
+.footer-section div>h3 {
+    margin-bottom: 3rem;
+}
+
+.footer-section div>a {
+    margin: 1.5rem 0;
+}
+
+.copywright hr {
+    margin-bottom: 4.5rem;
+    border-color: var(--clr-secondary-3);
+}
+
+.copywright p {
+    margin: auto;
+}
+
+/* ##################### media queries ######################### */
+
+/* medium device */
+@media screen and (max-width: 62em) {
+    .container {
+        width: 95%;
+    }
+
+    .header-nav .navigation-links {
+        gap: .5em;
+    }
+
+    .header-content {
+        margin: auto;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .fitness-image {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* change habit section */
+    .habit-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .habit-items .item {
+        width: 35%;
+    }
+
+    /* run section */
+    .run-section {
+        padding: 2.5rem;
+        gap: 1rem;
+        padding: var(--s-small) 2rem;
+    }
+
+    /* training section */
+    .training-images .row-1 div:nth-child(1) p {
+        top: 5%;
+    }
+
+    .training-images .row-1 div:nth-child(3) p {
+        top: 40%;
+    }
+
+    .training-images .row-2 div:nth-child(2) p {
+        top: 0%;
+    }
+
+    .training-images .row-2 div:nth-child(3) p {
+        top: 35%;
+    }
+
+    /* bmi calculator section */
+    .calculator-section header {
+        margin: 0 2rem;
+    }
+
+    .bmi-main {
+        margin: 0;
+    }
+
+    .calculator-content {
+        flex-direction: column;
+    }
+
+    .calculator-container h3 {
+        margin-top: 5rem;
+    }
+
+    /* wy choose us */
+    .why-choose-us .item {
+        padding: 2rem;
+    }
+
+    /* footer section */
+    .footer-section {
+        padding-left: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-section .column-1 {
+        grid-column: span 3;
+    }
+
+}
+
+/* small device */
+@media screen and (max-width: 36em) {
+
+    .fitness-image {
+        width: 95%;
+    }
+
+    .fitness-image .item1 {
+        top: 0;
+        right: -5%;
+    }
+
+    .fitness-image .item2 {
+        left: -5%;
+        bottom: 40%;
+    }
+
+    .hamburger {
+        display: initial;
+    }
+
+    .header-nav .navigation-links {
+        display: block;
+        position: fixed;
+        top: 7rem;
+        right: -18rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        background-color: var(--clr-white-1);
+        backdrop-filter: blur(.5rem);
+        text-align: center;
+        z-index: 1;
+    }
+
+    .header-nav .navigation-links li {
+        margin: 2.5rem;
+    }
+
+    /* change habit section */
+    .habit-items .item {
+        width: 100%;
+    }
+
+    /* run section */
+    .running-info button {
+        width: 100%;
+    }
+
+    .run-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .run-section .image-wrapper {
+        max-width: 50rem;
+    }
+
+    /* training section */
+    .training-images .row-1 div:nth-child(1) p span,
+    .training-images .row-1 div:nth-child(2) p span,
+    .training-images .row-1 div:nth-child(3) p span,
+    .training-images .row-2 div:nth-child(1) p span,
+    .training-images .row-2 div:nth-child(2) p span,
+    .training-images .row-2 div:nth-child(3) p span {
+        display: none;
+    }
+
+
+    .training-images {
+        margin: auto;
+    }
+
+    .training-images .row-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .training-images .row-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .training-images .row-1 div:nth-child(3) {
+        display: none;
+    }
+
+    .training-images .row-2 div:nth-child(3) {
+        display: none;
+    }
+
+    .training-images .row-1 div:nth-child(1) p {
+        top: 70%;
+    }
+
+    .training-images .row-1 div:nth-child(2) p {
+        top: 70%;
+    }
+
+    .training-images .row-2 div:nth-child(1) p {
+        top: 70%;
+        left: 5%;
+    }
+
+    .training-images .row-2 div:nth-child(2) p {
+        top: 70%;
+        left: 5%;
+    }
+
+    /* bmi calculator section */
+    .calculator-section header {
+        margin: 0 1rem;
+    }
+
+    /* team section */
+    .team-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* why choose us section */
+    .why-choose-us .items {
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .why-choose-us li:last-child:before {
+        scale: .9;
+    }
+
+    /* footer section */
+    footer {
+        margin-top: var(--s-medium);
+    }
+
+    .footer-section {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section .column-1 {
+        grid-column: initial;
+    }
+
+    .copywright {
+        grid-column: initial;
+    }
+}
