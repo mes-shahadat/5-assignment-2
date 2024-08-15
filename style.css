@@ -280,7 +280,7 @@ body {
 
 .header-content {
     /* min-height: 85svh; */
-    width: 75%;
+    width: 80%;
     margin: auto;
     margin-top: var(--s-small);
     display: flex;
@@ -346,7 +346,7 @@ body {
 
 .fitness-image .item2 {
     background-color: hsla(0, 0%, 100%, .15);
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
